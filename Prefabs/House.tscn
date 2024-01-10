@@ -1,0 +1,200 @@
+[gd_scene load_steps=13 format=3 uid="uid://dogvbdqt5wgab"]
+
+[ext_resource type="Texture2D" uid="uid://drvcd1txr4lg1" path="res://Assets/House1.png" id="1_fyovf"]
+[ext_resource type="Texture2D" uid="uid://gkd0ny1mqa16" path="res://Assets/House2.png" id="2_oj5uu"]
+[ext_resource type="Texture2D" uid="uid://c36k5ml5bcxu8" path="res://Assets/House3.png" id="3_8v6i2"]
+[ext_resource type="Texture2D" uid="uid://1nqtood3oufg" path="res://Assets/House4.png" id="4_ix05e"]
+[ext_resource type="Script" path="res://Scripts/HouseScript.cs" id="5_aarxc"]
+[ext_resource type="Texture2D" uid="uid://kcuqfleyuo08" path="res://Assets/HouseStair1.png" id="5_eu5mx"]
+[ext_resource type="Texture2D" uid="uid://gmn02h5n7qyi" path="res://Assets/HouseStair2.png" id="6_wbtp2"]
+[ext_resource type="Texture2D" uid="uid://ey48x8tkjhdk" path="res://Assets/HouseStair3.png" id="7_rom6b"]
+[ext_resource type="Texture2D" uid="uid://b5hj8r8ndibww" path="res://Assets/HouseStair4.png" id="8_6n32e"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3nidi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_eu5mx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_wbtp2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_rom6b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_6n32e")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f6x3v"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_fyovf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_oj5uu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_8v6i2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ix05e")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_btl2x"]
+size = Vector2(22, 22)
+
+[node name="House" type="Node2D"]
+position = Vector2(25, 47)
+
+[node name="Area2D10" type="Area2D" parent="."]
+position = Vector2(93, 14)
+rotation = -1.5708
+script = ExtResource("5_aarxc")
+
+[node name="StairsBricks" type="AnimatedSprite2D" parent="Area2D10"]
+texture_filter = 1
+position = Vector2(38, -21)
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_3nidi")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D10"]
+position = Vector2(27, -10)
+rotation = -1.57445
+scale = Vector2(2.13837, 2.21571)
+polygon = PackedVector2Array(10, 10, 10, 0, 0, 0)
+
+[node name="Area2D9" type="Area2D" parent="."]
+position = Vector2(72, 24)
+script = ExtResource("5_aarxc")
+
+[node name="MainBricks" type="AnimatedSprite2D" parent="Area2D9"]
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_f6x3v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D9"]
+shape = SubResource("RectangleShape2D_btl2x")
+
+[node name="Area2D8" type="Area2D" parent="."]
+position = Vector2(72, 0)
+script = ExtResource("5_aarxc")
+
+[node name="MainBricks" type="AnimatedSprite2D" parent="Area2D8"]
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_f6x3v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D8"]
+shape = SubResource("RectangleShape2D_btl2x")
+
+[node name="Area2D6" type="Area2D" parent="."]
+position = Vector2(48, -24)
+script = ExtResource("5_aarxc")
+
+[node name="MainBricks" type="AnimatedSprite2D" parent="Area2D6"]
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_f6x3v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D6"]
+shape = SubResource("RectangleShape2D_btl2x")
+
+[node name="Area2D5" type="Area2D" parent="."]
+position = Vector2(24, -24)
+script = ExtResource("5_aarxc")
+
+[node name="MainBricks" type="AnimatedSprite2D" parent="Area2D5"]
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_f6x3v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D5"]
+shape = SubResource("RectangleShape2D_btl2x")
+
+[node name="Area2D7" type="Area2D" parent="."]
+position = Vector2(27, -38)
+rotation = 1.5708
+script = ExtResource("5_aarxc")
+
+[node name="StairsBricks" type="AnimatedSprite2D" parent="Area2D7"]
+texture_filter = 1
+position = Vector2(38, -21)
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_3nidi")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D7"]
+position = Vector2(27, -10)
+rotation = -1.57445
+scale = Vector2(2.13837, 2.21571)
+polygon = PackedVector2Array(10, 10, 10, 0, 0, 0)
+
+[node name="Area2D3" type="Area2D" parent="."]
+position = Vector2(38, -45)
+rotation = -3.14159
+script = ExtResource("5_aarxc")
+
+[node name="StairsBricks" type="AnimatedSprite2D" parent="Area2D3"]
+texture_filter = 1
+position = Vector2(38, -21)
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_3nidi")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D3"]
+position = Vector2(27, -10)
+rotation = -1.57445
+scale = Vector2(2.13837, 2.21571)
+polygon = PackedVector2Array(10, 10, 10, 0, 0, 0)
+
+[node name="Area2D2" type="Area2D" parent="."]
+position = Vector2(-14, 21)
+script = ExtResource("5_aarxc")
+
+[node name="StairsBricks" type="AnimatedSprite2D" parent="Area2D2"]
+texture_filter = 1
+position = Vector2(38, -21)
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_3nidi")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D2"]
+position = Vector2(27, -10)
+rotation = -1.57445
+scale = Vector2(2.13837, 2.21571)
+polygon = PackedVector2Array(10, 10, 10, 0, 0, 0)
+
+[node name="Area2D4" type="Area2D" parent="."]
+position = Vector2(0, 24)
+script = ExtResource("5_aarxc")
+
+[node name="MainBricks" type="AnimatedSprite2D" parent="Area2D4"]
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_f6x3v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D4"]
+shape = SubResource("RectangleShape2D_btl2x")
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("5_aarxc")
+
+[node name="MainBricks" type="AnimatedSprite2D" parent="Area2D"]
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_f6x3v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_btl2x")
+
+[connection signal="area_entered" from="Area2D10" to="Area2D10" method="OnAreaEntered"]
+[connection signal="area_entered" from="Area2D9" to="Area2D9" method="OnAreaEntered"]
+[connection signal="area_entered" from="Area2D8" to="Area2D8" method="OnAreaEntered"]
+[connection signal="area_entered" from="Area2D6" to="Area2D6" method="OnAreaEntered"]
+[connection signal="area_entered" from="Area2D5" to="Area2D5" method="OnAreaEntered"]
+[connection signal="area_entered" from="Area2D7" to="Area2D7" method="OnAreaEntered"]
+[connection signal="area_entered" from="Area2D3" to="Area2D3" method="OnAreaEntered"]
+[connection signal="area_entered" from="Area2D2" to="Area2D2" method="OnAreaEntered"]
+[connection signal="area_entered" from="Area2D4" to="Area2D4" method="OnAreaEntered"]
+[connection signal="area_entered" from="Area2D" to="Area2D" method="OnAreaEntered"]

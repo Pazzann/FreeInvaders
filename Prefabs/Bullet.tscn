@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=3 uid="uid://drxm84fvnaqor"]
+
+[ext_resource type="Script" path="res://Scripts/Bullet.cs" id="1_g4xhh"]
+[ext_resource type="Texture2D" uid="uid://cnuf3m0sse22q" path="res://Assets/Bullet1.png" id="2_jpqrj"]
+[ext_resource type="Texture2D" uid="uid://bau5uq8ttf460" path="res://Assets/Bullet2.png" id="3_qgvp4"]
+[ext_resource type="Texture2D" uid="uid://h0ospv57j16w" path="res://Assets/Bullet3.png" id="4_wagir"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l58l5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_jpqrj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_qgvp4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_wagir")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0iu56"]
+size = Vector2(10, 30)
+
+[node name="Area2D" type="Area2D"]
+position = Vector2(83, 83)
+script = ExtResource("1_g4xhh")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(10, 10)
+sprite_frames = SubResource("SpriteFrames_l58l5")
+frame_progress = 0.091121
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_0iu56")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.2
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="OnTimerTimeout"]
