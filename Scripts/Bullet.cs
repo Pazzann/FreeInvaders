@@ -4,7 +4,7 @@ using FreeInvader.Scripts;
 public partial class Bullet : Area2D
 {
 	private AnimatedSprite2D _sprites;
-	private int _speed = -300;
+	private int _speed = -600;
 	
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
