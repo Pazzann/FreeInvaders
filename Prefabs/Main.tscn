@@ -63,10 +63,10 @@ offset_bottom = 24.0
 scale = Vector2(0.679999, 0.679999)
 
 [node name="RedLoc" type="Marker2D" parent="."]
-position = Vector2(-26, 132)
+position = Vector2(-26, 129)
 
 [node name="RedTimer" type="Timer" parent="."]
-wait_time = 30.0
+wait_time = 10.59
 autostart = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
