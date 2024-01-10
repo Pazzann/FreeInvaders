@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bbp0sncbt15yy"]
+[gd_scene load_steps=11 format=3 uid="uid://x5ijwrfw5s4u"]
 
 [ext_resource type="Texture2D" uid="uid://bgd82461c6rg7" path="res://Assets/jellyfish 1.png" id="1_g11y7"]
 [ext_resource type="Script" path="res://Scripts/Enemy.cs" id="1_uho0c"]
@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://6sdwhjgk20p7" path="res://Assets/jellyfish 2.png" id="2_h0x50"]
 [ext_resource type="Texture2D" uid="uid://cu5mxmtl05hfq" path="res://Assets/mushroom 1.png" id="3_fs0w1"]
 [ext_resource type="Texture2D" uid="uid://kci7tp1ahdc" path="res://Assets/mushroom 2.png" id="4_i8tnf"]
+[ext_resource type="Texture2D" uid="uid://hpelq2c4qp7q" path="res://Assets/bug 1.png" id="7_2s566"]
+[ext_resource type="Texture2D" uid="uid://dbfa4ubecrhwd" path="res://Assets/bug 2.png" id="8_bofc7"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_oijcn"]
 animations = [{
@@ -38,6 +40,17 @@ animations = [{
 "loop": true,
 "name": &"live2",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_2s566")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_bofc7")
+}],
+"loop": true,
+"name": &"live3",
+"speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_my67m"]
@@ -50,9 +63,15 @@ script = ExtResource("1_uho0c")
 texture_filter = 1
 scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_oijcn")
-animation = &"live1"
+animation = &"live3"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_my67m")
 
+[node name="BulletSpawnPos" type="Marker2D" parent="."]
+position = Vector2(0, 24)
+
+[node name="BulletSpawnTimer" type="Timer" parent="."]
+
 [connection signal="area_entered" from="." to="." method="OnAreaEntered"]
+[connection signal="timeout" from="BulletSpawnTimer" to="." method="ShootBullet"]
