@@ -60,4 +60,12 @@ offset_right = 803.0
 offset_bottom = 24.0
 scale = Vector2(0.679999, 0.679999)
 
+[node name="RedLoc" type="Marker2D" parent="."]
+position = Vector2(-26, 132)
+
+[node name="RedTimer" type="Timer" parent="."]
+wait_time = 30.0
+autostart = true
+
 [connection signal="timeout" from="MoveTimer" to="." method="UpdateEnemies"]
+[connection signal="timeout" from="RedTimer" to="." method="SpawnRed"]

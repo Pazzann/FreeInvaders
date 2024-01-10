@@ -11,7 +11,7 @@ public partial class Main : Node2D
 
 	private static Random Rng = new();
 
-	private PackedScene _enemyScene;
+	private PackedScene _enemyScene, _redScene;
 	private Marker2D _sRectMin, _sRectMax;
 
 	private List<Enemy> _enemies = new();
@@ -22,6 +22,7 @@ public partial class Main : Node2D
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
+		_redScene = GD.Load<PackedScene>("res://Prefabs/RedBonusShip.tscn");
 		_enemyScene = GD.Load<PackedScene>("res://Prefabs/Enemy.tscn");
 		
 		_sRectMin = GetNode<Marker2D>("EnemyRectMin");
@@ -91,9 +92,15 @@ public partial class Main : Node2D
 		
 	}
 
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
 		if(GlobalState.Live==0){GetTree().ChangeSceneToFile("res://Prefabs/GameOver.tscn");}
+	}
+	
+	private void SpawnRed()
+	{
+		var ship = (_redScene.Instantiate() as RedBonusShip)!;
+		ship.GlobalPosition = GetNode<Marker2D>("RedLoc").GlobalPosition;
+		AddChild(ship);
 	}
 }
