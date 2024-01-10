@@ -16,15 +16,15 @@ public partial class Menu : Control
 	}
 	private void Play()
 {
-	// Replace with function body.
+	GetTree().ChangeSceneToFile("res://Prefabs/Main.tscn");
 }
-
 
 private void Exit()
 {
-	// Replace with function body.
+	GetTree().Quit();
 }
 
-}
 
+
+}
 
