@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cg2flqhsk4228"]
+[gd_scene load_steps=9 format=3 uid="uid://cg2flqhsk4228"]
 
 [ext_resource type="Script" path="res://Scripts/Main.cs" id="1_oyj5e"]
 [ext_resource type="PackedScene" uid="uid://dogvbdqt5wgab" path="res://Prefabs/House.tscn" id="1_scxmv"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://hk6pq6lwb5x7" path="res://Prefabs/Score.tscn" id="3_vsuk1"]
 [ext_resource type="Texture2D" uid="uid://cxrijbedmoqbh" path="res://Assets/Paused.svg" id="3_y1f3x"]
 [ext_resource type="PackedScene" uid="uid://gf4317wlxjr0" path="res://Prefabs/Lives.tscn" id="7_bbvr2"]
+[ext_resource type="Texture2D" uid="uid://3vimsgmgadfc" path="res://Assets/House1.png" id="8_ajvi8"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_oyj5e")
@@ -66,6 +67,11 @@ position = Vector2(-26, 132)
 [node name="RedTimer" type="Timer" parent="."]
 wait_time = 30.0
 autostart = true
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(956, 1030)
+scale = Vector2(327.417, 2.75004)
+texture = ExtResource("8_ajvi8")
 
 [connection signal="timeout" from="MoveTimer" to="." method="UpdateEnemies"]
 [connection signal="timeout" from="RedTimer" to="." method="SpawnRed"]
