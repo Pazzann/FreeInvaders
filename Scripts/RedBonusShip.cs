@@ -22,7 +22,7 @@ public partial class RedBonusShip : Area2D
 	public override void _Process(double delta)
 	{
 		if(_sprite.Visible)
-			Position = new Vector2(Position.X + 20f * (float)delta, Position.Y);
+			Position = new Vector2(Position.X + 150f * (float)delta, Position.Y);
 	}
 
 
@@ -41,8 +41,8 @@ public partial class RedBonusShip : Area2D
 	{
 		_timesBlinked++;
 		_sprite.Visible = !_sprite.Visible;
-		if(_timesBlinked >3)
-			QueueFree();
+		if(_timesBlinked >5)
+			GetTree().CreateTimer(0.5f).Timeout += QueueFree;
 	}
 
 }
