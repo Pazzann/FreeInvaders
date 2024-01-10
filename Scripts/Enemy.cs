@@ -20,12 +20,12 @@ public partial class Enemy : Area2D
 		_bulletPos = GetNode<Marker2D>("BulletSpawnPos")!;
 		_bulletSpawnTimer = GetNode<Timer>("BulletSpawnTimer")!;
 
-		var off = Rng.NextSingle() * 100f;
+		var off = Rng.NextSingle() * 50f;
 		
 		GetTree().CreateTimer(off).Timeout += () =>
 		{
 			ShootBullet();
-			_bulletSpawnTimer.Start(100f);
+			_bulletSpawnTimer.Start(50f);
 		};
 	}
 

@@ -58,19 +58,28 @@ public partial class Player : Area2D
 
 		GlobalState.ReduceLive();
 
+		var callback = () =>
+		{
+			_sprite.Animation = "default";
+			_sprite.Stop();
+			GlobalPosition = GlobalPosition with { X = GetViewportRect().GetCenter().X };
+			
+			if (GlobalState.Live == 0)
+				QueueFree();
+		};
+
+		if (!_sprite.IsConnected(AnimatedSprite2D.SignalName.AnimationLooped, Callable.From(callback)))
+			_sprite.AnimationLooped += callback;
+
 		if (GlobalState.Live == 0)
 		{
 			_sprite.Animation = "explode";
-
-			GetTree().CreateTimer(0.2f).Timeout += () =>
-			{
-				QueueFree();
-			};
+			_sprite.Play();
 		}
 		else
 		{
 			_sprite.Animation = "explode";
-			GetTree().CreateTimer(0.2f).Timeout += () => _sprite.Animation = "default";
+			_sprite.Play();
 		}
 	}
 

@@ -27,11 +27,10 @@ animations = [{
 }],
 "loop": true,
 "name": &"explode",
-"speed": 2.0
+"speed": 6.0
 }]
 
 [node name="Player" type="Area2D"]
-scale = Vector2(0.292012, -0.526706)
 collision_layer = 3
 collision_mask = 2
 script = ExtResource("1_myt1i")
