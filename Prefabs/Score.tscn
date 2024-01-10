@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://b2gxnl6rps3iu"]
+[gd_scene load_steps=5 format=3 uid="uid://hk6pq6lwb5x7"]
 
 [ext_resource type="FontFile" uid="uid://c566dai8v6pxi" path="res://Fonts/Font.ttf" id="1_rlm06"]
 [ext_resource type="Script" path="res://Scripts/Score.cs" id="1_yqdr7"]
