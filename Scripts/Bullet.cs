@@ -5,6 +5,8 @@ public partial class Bullet : Area2D
 {
 	private AnimatedSprite2D _sprites;
 	private int _speed = -600;
+
+	public Node2D Shooter { get; set; }
 	
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()

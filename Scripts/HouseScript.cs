@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using FreeInvader.Scripts;
 
 public partial class HouseScript : Node
 {
@@ -14,6 +15,7 @@ public partial class HouseScript : Node
 	private void OnAreaEntered(Area2D area)
 	{
 		area.QueueFree();
+		
 		if(HouseSprites.Frame == 3)
 			QueueFree();
 		

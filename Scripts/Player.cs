@@ -42,6 +42,8 @@ public partial class Player : Area2D
 			_lastShotTime = curTime;
 			
 			var bullet = (_bulletScene.Instantiate() as Bullet)!;
+			bullet.Shooter = this;
+			
 			bullet.GlobalPosition = _bulletSpawnPos.GlobalPosition;
 			GetParent().AddChild(bullet);
 		}

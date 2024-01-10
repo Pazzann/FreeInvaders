@@ -1,0 +1,58 @@
+[gd_scene load_steps=9 format=3 uid="uid://bbp0sncbt15yy"]
+
+[ext_resource type="Texture2D" uid="uid://bgd82461c6rg7" path="res://Assets/jellyfish 1.png" id="1_g11y7"]
+[ext_resource type="Script" path="res://Scripts/Enemy.cs" id="1_uho0c"]
+[ext_resource type="Texture2D" uid="uid://c15pkw46i44lp" path="res://Assets/explosion.png" id="2_17nmi"]
+[ext_resource type="Texture2D" uid="uid://6sdwhjgk20p7" path="res://Assets/jellyfish 2.png" id="2_h0x50"]
+[ext_resource type="Texture2D" uid="uid://cu5mxmtl05hfq" path="res://Assets/mushroom 1.png" id="3_fs0w1"]
+[ext_resource type="Texture2D" uid="uid://kci7tp1ahdc" path="res://Assets/mushroom 2.png" id="4_i8tnf"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_oijcn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_17nmi")
+}],
+"loop": true,
+"name": &"explode",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_g11y7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_h0x50")
+}],
+"loop": true,
+"name": &"live1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_fs0w1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_i8tnf")
+}],
+"loop": true,
+"name": &"live2",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_my67m"]
+size = Vector2(64, 41.5)
+
+[node name="Enemy1" type="Area2D"]
+script = ExtResource("1_uho0c")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_oijcn")
+animation = &"live1"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_my67m")
+
+[connection signal="area_entered" from="." to="." method="OnAreaEntered"]
