@@ -45,6 +45,8 @@ public partial class Player : Area2D
 			
 			var bullet = (_bulletScene.Instantiate() as Bullet)!;
 			bullet.Shooter = this;
+			bullet.SetCollisionMaskValue(4, true);
+			bullet.SetCollisionLayerValue(5, true);
 			
 			bullet.GlobalPosition = _bulletSpawnPos.GlobalPosition;
 			GetParent().AddChild(bullet);
