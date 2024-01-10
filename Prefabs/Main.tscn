@@ -6,16 +6,16 @@
 [node name="Main" type="Node2D"]
 
 [node name="House1" parent="." instance=ExtResource("1_scxmv")]
-position = Vector2(273, 610)
+position = Vector2(273, 800)
 
 [node name="House2" parent="." instance=ExtResource("1_scxmv")]
-position = Vector2(673, 600)
+position = Vector2(673, 800)
 
 [node name="House3" parent="." instance=ExtResource("1_scxmv")]
-position = Vector2(1114, 600)
+position = Vector2(1114, 800)
 
 [node name="House4" parent="." instance=ExtResource("1_scxmv")]
-position = Vector2(1521, 600)
+position = Vector2(1521, 800)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 anchor_mode = 0

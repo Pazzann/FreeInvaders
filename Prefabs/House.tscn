@@ -78,6 +78,7 @@ position = Vector2(72, 24)
 script = ExtResource("5_aarxc")
 
 [node name="MainBricks" type="AnimatedSprite2D" parent="Area2D9"]
+texture_filter = 1
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_f6x3v")
 
@@ -89,6 +90,7 @@ position = Vector2(72, 0)
 script = ExtResource("5_aarxc")
 
 [node name="MainBricks" type="AnimatedSprite2D" parent="Area2D8"]
+texture_filter = 1
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_f6x3v")
 
@@ -100,6 +102,7 @@ position = Vector2(48, -24)
 script = ExtResource("5_aarxc")
 
 [node name="MainBricks" type="AnimatedSprite2D" parent="Area2D6"]
+texture_filter = 1
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_f6x3v")
 
@@ -111,6 +114,7 @@ position = Vector2(24, -24)
 script = ExtResource("5_aarxc")
 
 [node name="MainBricks" type="AnimatedSprite2D" parent="Area2D5"]
+texture_filter = 1
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_f6x3v")
 
@@ -172,6 +176,7 @@ position = Vector2(0, 24)
 script = ExtResource("5_aarxc")
 
 [node name="MainBricks" type="AnimatedSprite2D" parent="Area2D4"]
+texture_filter = 1
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_f6x3v")
 
@@ -182,6 +187,7 @@ shape = SubResource("RectangleShape2D_btl2x")
 script = ExtResource("5_aarxc")
 
 [node name="MainBricks" type="AnimatedSprite2D" parent="Area2D"]
+texture_filter = 1
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_f6x3v")
 
