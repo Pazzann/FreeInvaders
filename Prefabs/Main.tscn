@@ -30,7 +30,7 @@ anchor_mode = 0
 position = Vector2(108, 960)
 
 [node name="EnemyRectMin" type="Marker2D" parent="."]
-position = Vector2(127, 97)
+position = Vector2(126, 171)
 
 [node name="EnemyRectMax" type="Marker2D" parent="."]
 position = Vector2(1686, 495)
