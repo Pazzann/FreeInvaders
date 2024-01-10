@@ -1,3 +1,20 @@
-[gd_scene format=3 uid="uid://cg2flqhsk4228"]
+[gd_scene load_steps=2 format=3 uid="uid://cg2flqhsk4228"]
+
+[ext_resource type="PackedScene" uid="uid://dogvbdqt5wgab" path="res://Prefabs/House.tscn" id="1_scxmv"]
 
 [node name="Main" type="Node2D"]
+
+[node name="House1" parent="." instance=ExtResource("1_scxmv")]
+position = Vector2(273, 610)
+
+[node name="House2" parent="." instance=ExtResource("1_scxmv")]
+position = Vector2(673, 600)
+
+[node name="House3" parent="." instance=ExtResource("1_scxmv")]
+position = Vector2(1114, 600)
+
+[node name="House4" parent="." instance=ExtResource("1_scxmv")]
+position = Vector2(1521, 600)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0

@@ -1,5 +1,5 @@
 using Godot;
-using System;
+using FreeInvader.Scripts;
 
 public partial class Bullet : Area2D
 {
@@ -16,7 +16,7 @@ public partial class Bullet : Area2D
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
-		Position = new Vector2(Position.X, Position.Y + (float)(_speed * delta));
+		Position = new Vector2(Position.X, Position.Y + (float)(_speed * GlobalState.SpeedScale * delta));
 	}
 	private void OnTimerTimeout()
 	{
