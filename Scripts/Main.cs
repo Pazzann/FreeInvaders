@@ -94,7 +94,7 @@ public partial class Main : Node2D
 
 	public override void _Process(double delta)
 	{
-		if(GlobalState.Live==0){GetTree().ChangeSceneToFile("res://Prefabs/GameOver.tscn");}
+		if(GlobalState.Live==0){GlobalState.Live=3;GetTree().ChangeSceneToFile("res://Prefabs/GameOver.tscn");}
 	}
 	
 	private void SpawnRed()
