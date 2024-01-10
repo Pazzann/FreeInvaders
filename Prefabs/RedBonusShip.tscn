@@ -44,7 +44,7 @@ text = "100"
 label_settings = SubResource("LabelSettings_sqi6o")
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 0.154
+wait_time = 0.051
 
 [connection signal="area_entered" from="." to="." method="OnAreaEntered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -40,7 +40,7 @@ public partial class RedBonusShip : Area2D
 	private void _on_timer_timeout()
 	{
 		_timesBlinked++;
-		_sprite.Visible = !_sprite.Visible;
+		_label.Visible = !_label.Visible;
 		if(_timesBlinked >5)
 			GetTree().CreateTimer(0.5f).Timeout += QueueFree;
 	}
