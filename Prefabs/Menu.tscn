@@ -1,8 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://b6c7g6wrrspt5"]
 
-[ext_resource type="Script" path="res://Menu.cs" id="1_eerg4"]
-[ext_resource type="Texture2D" uid="uid://bqnwxl3usqaus" path="res://Sprite-0003.svg" id="1_rlob8"]
-[ext_resource type="Texture2D" uid="uid://chl3q5aadshwq" path="res://Sprite-0004.svg" id="2_le8wy"]
+[gd_scene load_steps=6 format=3 uid="uid://dx3dhxby7i5ro"]
+
+
+[ext_resource type="Script" path="res://Scripts/Menu.cs" id="1_hwk28"]
+[ext_resource type="Texture2D" uid="uid://bqnwxl3usqaus" path="res://Assets/Sprite-0003.svg" id="2_f8dse"]
+[ext_resource type="Texture2D" uid="uid://chl3q5aadshwq" path="res://Assets/Sprite-0004.svg" id="3_cauo3"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ox1nn"]
 
@@ -16,7 +18,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_eerg4")
+script = ExtResource("1_hwk28")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -50,7 +52,7 @@ grow_vertical = 2
 [node name="Button2" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme = SubResource("Theme_sqnq2")
-icon = ExtResource("1_rlob8")
+icon = ExtResource("2_f8dse")
 icon_alignment = 1
 
 [node name="Label" type="Label" parent="VBoxContainer"]
@@ -63,7 +65,7 @@ layout_mode = 2
 layout_mode = 2
 text = "
 "
-icon = ExtResource("2_le8wy")
+icon = ExtResource("3_cauo3")
 icon_alignment = 1
 
 [connection signal="pressed" from="VBoxContainer/Button2" to="." method="Play"]
