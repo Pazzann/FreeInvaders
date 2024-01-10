@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://mlhmy4dpgurf"
-path="res://.godot/imported/LogoReal.svg-74b96cad082eea8950589256b67b6fd6.ctex"
+uid="uid://r007u1ndyehf"
+path="res://.godot/imported/LogoReal1.svg-13bf284a1367d25f658f78ae3063a3ca.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/LogoReal.svg"
-dest_files=["res://.godot/imported/LogoReal.svg-74b96cad082eea8950589256b67b6fd6.ctex"]
+source_file="res://Assets/LogoReal1.svg"
+dest_files=["res://.godot/imported/LogoReal1.svg-13bf284a1367d25f658f78ae3063a3ca.ctex"]
 
 [params]
 
