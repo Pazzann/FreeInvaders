@@ -31,6 +31,9 @@ animations = [{
 }]
 
 [node name="Player" type="Area2D"]
+scale = Vector2(0.292012, -0.526706)
+collision_layer = 3
+collision_mask = 2
 script = ExtResource("1_myt1i")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -44,3 +47,5 @@ position = Vector2(0, -29)
 texture_filter = 1
 scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_7ixf4")
+
+[connection signal="area_entered" from="." to="." method="OnAreaEntered"]

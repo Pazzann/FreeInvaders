@@ -62,6 +62,7 @@ public partial class Main : Node2D
 	{
 		var minX = 99999f;
 		var maxX = -99999f;
+		
 		foreach (var enemy in _enemies)
 		{
 			if (IsInstanceValid(enemy))

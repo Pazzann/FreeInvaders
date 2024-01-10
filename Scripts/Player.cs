@@ -6,9 +6,10 @@ public partial class Player : Area2D
 {
 	private const float MovementSpeed = 400f;
 	private const float DelayBetweenShots = 0.5f;
-
+	
 	private PackedScene _bulletScene;
 	private Marker2D _bulletSpawnPos;
+	private AnimatedSprite2D _sprite;
 
 	private float _lastShotTime = 0f;
 	
@@ -16,6 +17,7 @@ public partial class Player : Area2D
 	{
 		_bulletScene = GD.Load<PackedScene>("res://Prefabs/Bullet.tscn");
 		_bulletSpawnPos = GetNode<Marker2D>("BulletSpawnPos")!;
+		_sprite = GetNode<AnimatedSprite2D>("AnimatedSprite2D")!;
 	}
 
 	public override void _Process(double delta)
@@ -48,4 +50,28 @@ public partial class Player : Area2D
 			GetParent().AddChild(bullet);
 		}
 	}
+	
+	private void OnAreaEntered(Area2D area)
+	{
+		if (area is Bullet)
+			area.QueueFree();
+
+		GlobalState.ReduceLive();
+
+		if (GlobalState.Live == 0)
+		{
+			_sprite.Animation = "explode";
+
+			GetTree().CreateTimer(0.2f).Timeout += () =>
+			{
+				QueueFree();
+			};
+		}
+		else
+		{
+			_sprite.Animation = "explode";
+			GetTree().CreateTimer(0.2f).Timeout += () => _sprite.Animation = "default";
+		}
+	}
+
 }
