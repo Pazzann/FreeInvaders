@@ -1,0 +1,90 @@
+[gd_scene load_steps=3 format=3 uid="uid://gf4317wlxjr0"]
+
+[ext_resource type="Texture2D" uid="uid://72k1djlrufr1" path="res://Assets/Lives.png" id="1_8xdm6"]
+[ext_resource type="Texture2D" uid="uid://dqg4afqesq57d" path="res://Assets/player.png" id="2_s5el1"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Lives" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(212, 59)
+scale = Vector2(15.7, 15.7)
+texture = ExtResource("1_8xdm6")
+
+[node name="Player" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(601, 69)
+scale = Vector2(14.625, 8.28468)
+texture = ExtResource("2_s5el1")
+
+[node name="Player2" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(881, 69)
+scale = Vector2(14.625, 8.28468)
+texture = ExtResource("2_s5el1")
+
+[node name="Player3" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(1161, 70)
+scale = Vector2(14.625, 8.28468)
+texture = ExtResource("2_s5el1")
+
+[node name="Player4" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(1446, 68)
+scale = Vector2(14.625, 8.28468)
+texture = ExtResource("2_s5el1")
+
+[node name="Player5" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(604, 170.277)
+scale = Vector2(14.625, 8.28468)
+texture = ExtResource("2_s5el1")
+
+[node name="Player6" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(884, 170.277)
+scale = Vector2(14.625, 8.28468)
+texture = ExtResource("2_s5el1")
+
+[node name="Player7" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(1164, 171.277)
+scale = Vector2(14.625, 8.28468)
+texture = ExtResource("2_s5el1")
+
+[node name="Player8" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(1449, 169.277)
+scale = Vector2(14.625, 8.28468)
+texture = ExtResource("2_s5el1")
+
+[node name="Player9" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(605, 269.277)
+scale = Vector2(14.625, 8.28468)
+texture = ExtResource("2_s5el1")
+
+[node name="Player10" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(885, 269.277)
+scale = Vector2(14.625, 8.28468)
+texture = ExtResource("2_s5el1")
+
+[node name="Player11" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(1165, 270.277)
+scale = Vector2(14.625, 8.28468)
+texture = ExtResource("2_s5el1")
+
+[node name="Player12" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(1450, 268.277)
+scale = Vector2(14.625, 8.28468)
+texture = ExtResource("2_s5el1")
