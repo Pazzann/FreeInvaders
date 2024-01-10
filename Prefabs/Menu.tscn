@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://dxi1h2dyrqrnf"]
+[gd_scene load_steps=8 format=3 uid="uid://dxi1h2dyrqrnf"]
 
 [ext_resource type="Script" path="res://Scripts/Menu.cs" id="1_hwk28"]
 [ext_resource type="Texture2D" uid="uid://bqnwxl3usqaus" path="res://Assets/Sprite-0003.svg" id="2_f8dse"]
 [ext_resource type="Texture2D" uid="uid://dcxfslig561qu" path="res://Assets/Board.svg" id="2_m2r4p"]
+[ext_resource type="Texture2D" uid="uid://mlhmy4dpgurf" path="res://Assets/LogoReal.svg" id="2_wbr8m"]
 [ext_resource type="Texture2D" uid="uid://chl3q5aadshwq" path="res://Assets/Sprite-0004.svg" id="3_cauo3"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ox1nn"]
@@ -48,14 +49,31 @@ offset_bottom = 48.5
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="Sprite2D2" type="Sprite2D" parent="VBoxContainer"]
+scale = Vector2(5, 5)
+texture = ExtResource("2_wbr8m")
+offset = Vector2(60, -20)
+
 [node name="Sprite2D" type="Sprite2D" parent="VBoxContainer"]
 scale = Vector2(2, 2)
 texture = ExtResource("2_m2r4p")
-offset = Vector2(135, -90)
+offset = Vector2(135, 90)
 
 [node name="Label" type="Label" parent="VBoxContainer"]
 layout_mode = 2
 text = "
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 "
