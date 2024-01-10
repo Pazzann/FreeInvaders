@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://chl3q5aadshwq"
-path="res://.godot/imported/Sprite-0004.svg-c2217bcc855a85aa842eae67c8707814.ctex"
+uid="uid://d1vrlwu1iyhu5"
+path="res://.godot/imported/BossAppears1.png-105e657e899d5b1e25a8a95d73a57e79.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprite-0004.svg"
-dest_files=["res://.godot/imported/Sprite-0004.svg-c2217bcc855a85aa842eae67c8707814.ctex"]
+source_file="res://Assets/BossAppears1.png"
+dest_files=["res://.godot/imported/BossAppears1.png-105e657e899d5b1e25a8a95d73a57e79.ctex"]
 
 [params]
 
@@ -32,6 +32,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false
