@@ -22,5 +22,5 @@ layout_mode = 0
 offset_left = 135.0
 offset_right = 459.0
 offset_bottom = 147.0
-text = "2452"
+text = "0"
 label_settings = SubResource("LabelSettings_et01f")
