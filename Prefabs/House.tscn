@@ -1,14 +1,14 @@
 [gd_scene load_steps=13 format=3 uid="uid://dogvbdqt5wgab"]
 
-[ext_resource type="Texture2D" uid="uid://drvcd1txr4lg1" path="res://Assets/House1.png" id="1_fyovf"]
-[ext_resource type="Texture2D" uid="uid://gkd0ny1mqa16" path="res://Assets/House2.png" id="2_oj5uu"]
-[ext_resource type="Texture2D" uid="uid://c36k5ml5bcxu8" path="res://Assets/House3.png" id="3_8v6i2"]
-[ext_resource type="Texture2D" uid="uid://1nqtood3oufg" path="res://Assets/House4.png" id="4_ix05e"]
+[ext_resource type="Texture2D" uid="uid://3vimsgmgadfc" path="res://Assets/House1.png" id="1_fyovf"]
+[ext_resource type="Texture2D" uid="uid://d2dvd44h5u75r" path="res://Assets/House2.png" id="2_oj5uu"]
+[ext_resource type="Texture2D" uid="uid://dedp3dgm4e5y2" path="res://Assets/House3.png" id="3_8v6i2"]
+[ext_resource type="Texture2D" uid="uid://cdeaurseksus5" path="res://Assets/House4.png" id="4_ix05e"]
 [ext_resource type="Script" path="res://Scripts/HouseScript.cs" id="5_aarxc"]
-[ext_resource type="Texture2D" uid="uid://kcuqfleyuo08" path="res://Assets/HouseStair1.png" id="5_eu5mx"]
-[ext_resource type="Texture2D" uid="uid://gmn02h5n7qyi" path="res://Assets/HouseStair2.png" id="6_wbtp2"]
-[ext_resource type="Texture2D" uid="uid://ey48x8tkjhdk" path="res://Assets/HouseStair3.png" id="7_rom6b"]
-[ext_resource type="Texture2D" uid="uid://b5hj8r8ndibww" path="res://Assets/HouseStair4.png" id="8_6n32e"]
+[ext_resource type="Texture2D" uid="uid://dcc2ph3b5aimv" path="res://Assets/HouseStair1.png" id="5_eu5mx"]
+[ext_resource type="Texture2D" uid="uid://cingjssbs1m63" path="res://Assets/HouseStair2.png" id="6_wbtp2"]
+[ext_resource type="Texture2D" uid="uid://elgks0erirpm" path="res://Assets/HouseStair3.png" id="7_rom6b"]
+[ext_resource type="Texture2D" uid="uid://c288htvxmci7j" path="res://Assets/HouseStair4.png" id="8_6n32e"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3nidi"]
 animations = [{
@@ -78,6 +78,7 @@ position = Vector2(72, 24)
 script = ExtResource("5_aarxc")
 
 [node name="MainBricks" type="AnimatedSprite2D" parent="Area2D9"]
+texture_filter = 1
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_f6x3v")
 
@@ -89,6 +90,7 @@ position = Vector2(72, 0)
 script = ExtResource("5_aarxc")
 
 [node name="MainBricks" type="AnimatedSprite2D" parent="Area2D8"]
+texture_filter = 1
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_f6x3v")
 
@@ -100,6 +102,7 @@ position = Vector2(48, -24)
 script = ExtResource("5_aarxc")
 
 [node name="MainBricks" type="AnimatedSprite2D" parent="Area2D6"]
+texture_filter = 1
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_f6x3v")
 
@@ -111,6 +114,7 @@ position = Vector2(24, -24)
 script = ExtResource("5_aarxc")
 
 [node name="MainBricks" type="AnimatedSprite2D" parent="Area2D5"]
+texture_filter = 1
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_f6x3v")
 
@@ -172,6 +176,7 @@ position = Vector2(0, 24)
 script = ExtResource("5_aarxc")
 
 [node name="MainBricks" type="AnimatedSprite2D" parent="Area2D4"]
+texture_filter = 1
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_f6x3v")
 
@@ -182,6 +187,7 @@ shape = SubResource("RectangleShape2D_btl2x")
 script = ExtResource("5_aarxc")
 
 [node name="MainBricks" type="AnimatedSprite2D" parent="Area2D"]
+texture_filter = 1
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_f6x3v")
 
