@@ -1,0 +1,71 @@
+[gd_scene load_steps=12 format=3 uid="uid://bs7jc38tq7ybv"]
+
+[ext_resource type="Texture2D" uid="uid://d1vrlwu1iyhu5" path="res://Assets/BossAppears1.png" id="1_4eu8g"]
+[ext_resource type="Script" path="res://Scripts/Boss.cs" id="1_a21fq"]
+[ext_resource type="Texture2D" uid="uid://2b6nqc3gih0v" path="res://Assets/BossAppears2.png" id="2_jlsp6"]
+[ext_resource type="Texture2D" uid="uid://dbkw54k12ssya" path="res://Assets/BossAppears3.png" id="3_o60oi"]
+[ext_resource type="Texture2D" uid="uid://fpi48i1ocqrj" path="res://Assets/Boss1.png" id="4_kgjk7"]
+[ext_resource type="Texture2D" uid="uid://c15ag4kh4ewx2" path="res://Assets/Boss2.png" id="5_i4x2p"]
+[ext_resource type="Texture2D" uid="uid://b6wkksoiogwy1" path="res://Assets/Boss3.png" id="6_05hc8"]
+[ext_resource type="Texture2D" uid="uid://kfpg77c0e65c" path="res://Assets/Boss4.png" id="7_nbis8"]
+[ext_resource type="Texture2D" uid="uid://bebhlmw36jh85" path="res://Assets/Boss5.png" id="8_oqru5"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x2rlf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_4eu8g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_jlsp6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_o60oi")
+}],
+"loop": true,
+"name": &"appear",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_kgjk7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_i4x2p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_05hc8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_nbis8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_nbis8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_oqru5")
+}],
+"loop": true,
+"name": &"fight",
+"speed": 7.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s5vhj"]
+size = Vector2(86, 68)
+
+[node name="Boss" type="Area2D"]
+collision_layer = 0
+collision_mask = 8
+script = ExtResource("1_a21fq")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_x2rlf")
+animation = &"fight"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_s5vhj")
+
+[connection signal="area_entered" from="." to="." method="OnAreaEntered"]
