@@ -25,5 +25,6 @@ public partial class SpritePause : Sprite2D
 				Hide();
 			}
 		}
+		if(Input.IsActionJustPressed("leave")){GetTree().Quit();}
 	}
 }
