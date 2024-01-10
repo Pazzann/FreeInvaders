@@ -14,7 +14,7 @@ public partial class GameOver : Control
 	}
 	private void TryAgain()
 {
-	// Replace with function body.
+	GetTree().ChangeSceneToFile("res://Prefabs/Menu.tscn");
 }
 
 }
