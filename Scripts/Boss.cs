@@ -47,10 +47,8 @@ public partial class Boss : Area2D
 		
 		area.QueueFree();
 		
-		QueueFree();
-		
-		//_sprite.Animation = "explode";
-		//GetTree().CreateTimer(0.2f).Timeout += QueueFree;
+		_sprite.Animation = "explode";
+		GetTree().CreateTimer(0.2f).Timeout += QueueFree;
 	}
 
 }
