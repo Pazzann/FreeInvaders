@@ -50,16 +50,19 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Sprite2D2" type="Sprite2D" parent="VBoxContainer"]
+texture_filter = 1
 scale = Vector2(5, 5)
 texture = ExtResource("2_wbr8m")
 offset = Vector2(60, -20)
 
 [node name="Sprite2D" type="Sprite2D" parent="VBoxContainer"]
+texture_filter = 1
 scale = Vector2(2, 2)
 texture = ExtResource("2_m2r4p")
 offset = Vector2(135, 90)
 
 [node name="Label" type="Label" parent="VBoxContainer"]
+texture_filter = 1
 layout_mode = 2
 text = "
 
