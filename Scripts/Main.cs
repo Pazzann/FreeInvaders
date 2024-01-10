@@ -97,11 +97,6 @@ public partial class Main : Node2D
 
 		GlobalState.Live++;
 		GlobalState.ResetCount++;
-
-		var boss = (_bossScene.Instantiate() as Boss)!;
-		boss.GlobalPosition = GetViewportRect().GetCenter();
-		
-		AddChild(boss);
 	}
 
 	public override void _Process(double delta)
@@ -118,5 +113,13 @@ public partial class Main : Node2D
 		var ship = (_redScene.Instantiate() as RedBonusShip)!;
 		ship.GlobalPosition = GetNode<Marker2D>("RedLoc").GlobalPosition;
 		AddChild(ship);
+	}
+	
+	private void _on_boss_timer_timeout()
+	{
+		var boss = (_bossScene.Instantiate() as Boss)!;
+		boss.GlobalPosition = GetViewportRect().GetCenter();
+		
+		AddChild(boss);
 	}
 }

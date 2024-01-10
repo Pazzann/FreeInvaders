@@ -73,5 +73,10 @@ position = Vector2(956, 1030)
 scale = Vector2(327.417, 2.75004)
 texture = ExtResource("8_ajvi8")
 
+[node name="BossTimer" type="Timer" parent="."]
+wait_time = 60.0
+autostart = true
+
 [connection signal="timeout" from="MoveTimer" to="." method="UpdateEnemies"]
 [connection signal="timeout" from="RedTimer" to="." method="SpawnRed"]
+[connection signal="timeout" from="BossTimer" to="." method="_on_boss_timer_timeout"]
