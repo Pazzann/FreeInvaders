@@ -96,6 +96,9 @@ public partial class Main : Node2D
 			
 			pos.X = _sRectMin.GlobalPosition.X;
 		}
+
+		GlobalState.Live++;
+		GlobalState.ResetCount++;
 	}
 
 	public override void _Process(double delta)
