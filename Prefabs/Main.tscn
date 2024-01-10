@@ -4,9 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://dogvbdqt5wgab" path="res://Prefabs/House.tscn" id="1_scxmv"]
 [ext_resource type="PackedScene" uid="uid://cyr7fa45aojg5" path="res://Prefabs/Player.tscn" id="2_e75sb"]
 [ext_resource type="Script" path="res://Scripts/SpritePause.cs" id="3_78bke"]
-[ext_resource type="PackedScene" uid="uid://hk6pq6lwb5x7" path="res://Prefabs/Score.tscn" id="3_vsuk1"]
+[ext_resource type="PackedScene" uid="uid://b2gxnl6rps3iu" path="res://Prefabs/Score.tscn" id="3_vsuk1"]
 [ext_resource type="Texture2D" uid="uid://cxrijbedmoqbh" path="res://Assets/Paused.svg" id="3_y1f3x"]
-[ext_resource type="PackedScene" uid="uid://gf4317wlxjr0" path="res://Prefabs/Lives.tscn" id="7_bbvr2"]
+[ext_resource type="PackedScene" path="res://Prefabs/Lives.tscn" id="7_bbvr2"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_oyj5e")
