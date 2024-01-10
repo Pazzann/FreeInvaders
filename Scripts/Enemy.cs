@@ -45,6 +45,7 @@ public partial class Enemy : Area2D
 				GlobalState.Score += 40;
 		}
 
+		GlobalState.EnemyCount--;
 		area.QueueFree();
 		
 		Sprite.Animation = "explode";
@@ -56,12 +57,14 @@ public partial class Enemy : Area2D
 		_bulletSpawnTimer.Start(10f);
 		
 		var bullet = (_bulletScene.Instantiate() as Bullet)!;
+		
 		bullet.Shooter = this;
 		bullet.CollisionLayer = bullet.CollisionMask = 2;
 		bullet.Speed = -bullet.Speed;
 			
 		bullet.GlobalPosition = _bulletPos.GlobalPosition;
 		GetParent().AddChild(bullet);
+		bullet._sprites.Frame = Rng.Next(1, 3);
 	}
 
 }

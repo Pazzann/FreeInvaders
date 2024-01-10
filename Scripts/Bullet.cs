@@ -3,7 +3,7 @@ using FreeInvader.Scripts;
 
 public partial class Bullet : Area2D
 {
-	private AnimatedSprite2D _sprites;
+	public AnimatedSprite2D _sprites;
 	public int Speed = -600;
 
 	public Node2D Shooter { get; set; }
