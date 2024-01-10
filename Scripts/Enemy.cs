@@ -20,7 +20,12 @@ public partial class Enemy : Area2D
 	{
 		if (area is Bullet { Shooter: Player })
 		{
-			GlobalState.Score += 10;
+			if(Sprite.Animation == "live1")
+				GlobalState.Score += 10;
+			if(Sprite.Animation == "live2")
+				GlobalState.Score += 20;
+			if(Sprite.Animation == "live3")
+				GlobalState.Score += 40;
 		}
 
 		area.QueueFree();

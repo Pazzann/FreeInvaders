@@ -28,10 +28,11 @@ public partial class Main : Node2D
 		_sRectMax = GetNode<Marker2D>("EnemyRectMax");
 
 		var pos = _sRectMin.GlobalPosition;
+		var type = 0;
 
 		for (;pos.Y < _sRectMax.GlobalPosition.Y; pos.Y += StepY)
 		{
-			var type = Rng.Next(2);
+			
 			var frame = Rng.Next(2);
 			
 			for (;pos.X < _sRectMax.GlobalPosition.X; pos.X += StepX)
@@ -42,13 +43,17 @@ public partial class Main : Node2D
 				AddChild(enemy);
 
 				if (type == 0)
-					enemy.Sprite.Animation = "live1";
-				else
+					enemy.Sprite.Animation = "live3";
+				else if (type is 1 or 2)
 					enemy.Sprite.Animation = "live2";
+				else if (type is 3 or 4 or 5)
+					enemy.Sprite.Animation = "live1";
 
 				enemy.Sprite.Frame = frame;
 			}
 
+			type++;
+			
 			pos.X = _sRectMin.GlobalPosition.X;
 		}
 	}
