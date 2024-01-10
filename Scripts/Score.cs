@@ -13,6 +13,6 @@ public partial class Score : Node
 
 	public override void _Process(double delta)
 	{
-		_score.Text = GlobalState.Score.ToString();
+		_score.Text = (GlobalState.Score >= 1000 ) ? GlobalState.Score / 1000  + ((GlobalState.Score < 1100) ? ",0" + GlobalState.Score % 1000 : "," + GlobalState.Score % 1000) : GlobalState.Score.ToString();
 	}
 }
