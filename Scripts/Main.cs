@@ -53,9 +53,8 @@ public partial class Main : Node2D
 		}
 	}
 	
-	private void MoveEnemies()
+	private void UpdateEnemies()
 	{
-		GD.Print(2);
 		var minX = 99999f;
 		var maxX = -99999f;
 		foreach (var enemy in _enemies)

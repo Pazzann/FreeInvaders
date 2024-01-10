@@ -18,6 +18,11 @@ public partial class Enemy : Area2D
 	
 	private void OnAreaEntered(Area2D area)
 	{
+		if (area is Bullet { Shooter: Player })
+		{
+			GlobalState.Score += 10;
+		}
+
 		area.QueueFree();
 		
 		Sprite.Animation = "explode";
