@@ -1,10 +1,10 @@
 [gd_scene load_steps=8 format=3 uid="uid://bkc1ov7yj1v1a"]
 
 [ext_resource type="Script" path="res://Scripts/Menu.cs" id="1_hwk28"]
-[ext_resource type="Texture2D" uid="uid://bqnwxl3usqaus" path="res://Assets/Sprite-0003.svg" id="2_f8dse"]
 [ext_resource type="Texture2D" uid="uid://dcxfslig561qu" path="res://Assets/Board.svg" id="2_m2r4p"]
-[ext_resource type="Texture2D" uid="uid://mlhmy4dpgurf" path="res://Assets/LogoReal.svg" id="2_wbr8m"]
+[ext_resource type="Texture2D" uid="uid://r007u1ndyehf" path="res://Assets/LogoReal1.svg" id="2_rm2iy"]
 [ext_resource type="Texture2D" uid="uid://chl3q5aadshwq" path="res://Assets/Sprite-0004.svg" id="3_cauo3"]
+[ext_resource type="Texture2D" uid="uid://bdleghbfl8cag" path="res://Assets/play.svg" id="4_xypx8"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ox1nn"]
 
@@ -51,15 +51,15 @@ grow_vertical = 2
 
 [node name="Sprite2D2" type="Sprite2D" parent="VBoxContainer"]
 texture_filter = 1
-scale = Vector2(5, 5)
-texture = ExtResource("2_wbr8m")
-offset = Vector2(60, -20)
+scale = Vector2(3.7, 3.7)
+texture = ExtResource("2_rm2iy")
+offset = Vector2(80, -20)
 
 [node name="Sprite2D" type="Sprite2D" parent="VBoxContainer"]
 texture_filter = 1
 scale = Vector2(2, 2)
 texture = ExtResource("2_m2r4p")
-offset = Vector2(135, 90)
+offset = Vector2(140, 90)
 
 [node name="Label" type="Label" parent="VBoxContainer"]
 texture_filter = 1
@@ -84,7 +84,7 @@ text = "
 [node name="Button2" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme = SubResource("Theme_sqnq2")
-icon = ExtResource("2_f8dse")
+icon = ExtResource("4_xypx8")
 icon_alignment = 1
 
 [node name="Label2" type="Label" parent="VBoxContainer"]

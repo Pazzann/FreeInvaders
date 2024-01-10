@@ -24,7 +24,9 @@ private void Exit()
 	GetTree().Quit();
 }
 
-
-
+void GameOver()
+{
+	GetTree().ChangeSceneToFile("res://Prefabs/GameOver.tscn");
+}
 }
 
