@@ -11,7 +11,7 @@ public partial class Main : Node2D
 
 	private static Random Rng = new();
 
-	private PackedScene _enemyScene, _redScene;
+	private PackedScene _enemyScene, _redScene, _bossScene;
 	private Marker2D _sRectMin, _sRectMax;
 
 	private List<Enemy> _enemies = new();
@@ -22,6 +22,7 @@ public partial class Main : Node2D
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
+		_bossScene = GD.Load<PackedScene>("res://Prefabs/Boss.tscn");
 		_redScene = GD.Load<PackedScene>("res://Prefabs/RedBonusShip.tscn");
 		_enemyScene = GD.Load<PackedScene>("res://Prefabs/Enemy.tscn");
 		
@@ -69,7 +70,6 @@ public partial class Main : Node2D
 
 		for (;pos.Y < _sRectMax.GlobalPosition.Y; pos.Y += StepY)
 		{
-			
 			var frame = Rng.Next(2);
 			
 			for (;pos.X < _sRectMax.GlobalPosition.X; pos.X += StepX)
@@ -97,6 +97,11 @@ public partial class Main : Node2D
 
 		GlobalState.Live++;
 		GlobalState.ResetCount++;
+
+		var boss = (_bossScene.Instantiate() as Boss)!;
+		boss.GlobalPosition = GetViewportRect().GetCenter();
+		
+		AddChild(boss);
 	}
 
 	public override void _Process(double delta)

@@ -29,6 +29,9 @@ public partial class Boss : Area2D
 
 	public override void _Process(double delta)
 	{
+		if (_first)
+			return;
+		
 		GlobalTranslate(300f * _d * (float) delta);
 
 		if (GlobalPosition.X > GetViewportRect().End.X || GlobalPosition.X < GetViewportRect().Position.X)
