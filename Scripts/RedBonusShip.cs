@@ -22,7 +22,7 @@ public partial class RedBonusShip : Area2D
 	public override void _Process(double delta)
 	{
 		if(_sprite.Visible)
-			Position = new Vector2(Position.X, Position.Y + 20f * (float)delta);
+			Position = new Vector2(Position.X + 20f * (float)delta, Position.Y);
 	}
 
 
