@@ -1,0 +1,50 @@
+[gd_scene load_steps=7 format=3 uid="uid://djfs48vgmqob"]
+
+[ext_resource type="Script" path="res://Scripts/RedBonusShip.cs" id="1_7r2eb"]
+[ext_resource type="Texture2D" uid="uid://b6ohhfx5ucrak" path="res://Assets/spaceship.png" id="1_xjs2q"]
+[ext_resource type="FontFile" uid="uid://c566dai8v6pxi" path="res://Fonts/Font.ttf" id="3_k7jiy"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_resct"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_xjs2q")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jrcle"]
+size = Vector2(80, 35)
+
+[sub_resource type="LabelSettings" id="LabelSettings_sqi6o"]
+font = ExtResource("3_k7jiy")
+font_size = 60
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_7r2eb")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_resct")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2.5)
+shape = SubResource("RectangleShape2D_jrcle")
+
+[node name="Label" type="Label" parent="."]
+texture_filter = 1
+offset_left = -52.0
+offset_top = -24.0
+offset_right = 68.0
+offset_bottom = 52.0
+text = "100"
+label_settings = SubResource("LabelSettings_sqi6o")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.154
+
+[connection signal="area_entered" from="." to="." method="OnAreaEntered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
