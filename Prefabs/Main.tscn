@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://cg2flqhsk4228"]
+[gd_scene load_steps=7 format=3 uid="uid://cg2flqhsk4228"]
 
 [ext_resource type="Script" path="res://Scripts/Main.cs" id="1_oyj5e"]
 [ext_resource type="PackedScene" uid="uid://dogvbdqt5wgab" path="res://Prefabs/House.tscn" id="1_scxmv"]
-[ext_resource type="PackedScene" uid="uid://cyr7fa45aojg5" path="res://Prefabs/Player.tscn" id="2_e75sb"]
+[ext_resource type="PackedScene" path="res://Prefabs/Player.tscn" id="2_e75sb"]
+[ext_resource type="Script" path="res://Scripts/SpritePause.cs" id="3_78bke"]
 [ext_resource type="PackedScene" path="res://Prefabs/Score.tscn" id="3_vsuk1"]
+[ext_resource type="Texture2D" uid="uid://cxrijbedmoqbh" path="res://Assets/Paused.svg" id="3_y1f3x"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_oyj5e")
@@ -41,5 +43,13 @@ offset_left = 50.0
 offset_top = -25.0
 offset_right = 50.0
 offset_bottom = -25.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+process_mode = 3
+visible = false
+position = Vector2(975, 500)
+scale = Vector2(2, 2)
+texture = ExtResource("3_y1f3x")
+script = ExtResource("3_78bke")
 
 [connection signal="timeout" from="MoveTimer" to="." method="UpdateEnemies"]
