@@ -94,6 +94,6 @@ public partial class Main : Node2D
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
-		if(GlobalState.Live==0){GetTree().ChangeSceneToFile("res://Prefabs/GameOver.tscn");}
+		if(GlobalState.Live==0){GlobalState.Live=3;GetTree().ChangeSceneToFile("res://Prefabs/GameOver.tscn");}
 	}
 }
